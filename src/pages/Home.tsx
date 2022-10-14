@@ -14,7 +14,6 @@ import { useNavigate } from "react-router-dom";
 type Props = {};
 
 export default function Home({}: Props) {
-  const {arrJob} = useSelector((state:RootState)=>state.findJobReducer)
   let keyWordRef = useRef("")
   const dispatch:Appdispatch = useDispatch();
   const navigate = useNavigate();
