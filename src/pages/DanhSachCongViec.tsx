@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import Footer from "../components/Footer";
 import Header from "../components/Header";
 import { Appdispatch, RootState } from "../redux/configStore";
 import {
@@ -21,7 +22,7 @@ export default function DanhSachCongViec({}: Props) {
   const renderJob = () => {
     return arrJob.map((job: any) => {
       return (
-        <div className="col-sm-12 col-xl-3 col-lg-4 col-md-4 mt-5" key={job}>
+        <div className="col-sm col-xxl-3 col-lg-4 col-md-6 mt-5" key={job}>
           <div className="card" style={{ width: "18rem" }}>
             <img
               src={job.congViec.hinhAnh}
@@ -269,7 +270,14 @@ export default function DanhSachCongViec({}: Props) {
         <div className="container">
           <div className="row">{renderJob()}</div>
         </div>
+        <hr className="my-5"/>
+      <div className="container">
+        <div className="row">
+          <Footer/>
+        </div>
       </div>
+      </div>
+      
     </div>
   );
 }
