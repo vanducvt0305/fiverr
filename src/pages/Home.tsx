@@ -89,7 +89,7 @@ export default function Home({}: Props) {
           <div className="row fix-m">
             <input
               onChange={handleChange}
-              className="search-input col-12 col-lg-4 col-md-8"
+              className="search-input col-12 col-lg-5 col-md-8"
               type="search"
               placeholder='       Try "building mobile app"'
             ></input>

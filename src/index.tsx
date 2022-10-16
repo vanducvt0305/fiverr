@@ -2,7 +2,6 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import Login from "./pages/Login";
 import HomeTemplate from "./templates/HomeTemplate";
 import "./assets/scss/styles.scss";
 import { Provider } from "react-redux";
@@ -24,9 +23,11 @@ root.render(
         <Routes>
           <Route path="" element={<HomeTemplate />}>
             <Route index element={<Home />}></Route>
-            <Route path="login" element={<Login />}></Route>
+            {/* <Route path="login" element={<Login />}></Route> */}
             <Route path="danhsachcongviec" element={<DanhSachCongViec />}></Route>
-            <Route path="chitietcongviec" element={<ChiTietCongViec />}></Route>
+            <Route path="chitietcongviec">
+              <Route path=":id" element={<ChiTietCongViec />}></Route>
+            </Route>
             <Route path="danhsachcongviecvaloaicongviec" element={<DanhSachCongViecVaLoaiCongViec />}></Route>
           </Route>
         </Routes>

@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { NavLink } from "react-router-dom";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import { Appdispatch, RootState } from "../redux/configStore";
@@ -20,9 +21,9 @@ export default function DanhSachCongViec({}: Props) {
     (state: RootState) => state.findJobReducer
   );
   const renderJob = () => {
-    return arrJob.map((job: any) => {
+    return arrJob?.map((job: any,index:number) => {
       return (
-        <div className="col-sm col-xxl-3 col-lg-4 col-md-6 mt-5" key={job}>
+        <NavLink className="col-sm col-xxl-3 col-lg-4 col-md-6 mt-5 nav-congViec" key={index} to={`/chitietcongviec/${job.id}`}>
           <div className="card" style={{ width: "18rem" }}>
             <img
               src={job.congViec.hinhAnh}
@@ -84,7 +85,7 @@ export default function DanhSachCongViec({}: Props) {
               </div>
             </div>
           </div>
-        </div>
+        </NavLink>
       );
     });
   };
@@ -277,7 +278,6 @@ export default function DanhSachCongViec({}: Props) {
         </div>
       </div>
       </div>
-      
     </div>
   );
 }

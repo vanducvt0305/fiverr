@@ -11,7 +11,7 @@
   z-index: 100;
   width: 100%;
   // background-color: #404145;
-  min-height: 480px;
+  min-height: 680px;
 }
 .text-a {
   text-decoration: none;
@@ -46,7 +46,7 @@
 }
 .object-fit {
   object-fit: cover;
-  min-height: 450px;
+  min-height: 680px;
 }
 .carousel-text {
   font-size: 48px;
@@ -488,6 +488,8 @@
 }
 // Menu
 .menu-nav {
+  position: relative;
+  z-index: 10;
   list-style: none;
   text-decoration: none;
   padding: 0;
@@ -595,6 +597,9 @@
   line-height: 150%;
   font-weight: 700;
 }
+.card-body{
+  min-height: 200px;
+}
 // TopBar
 .topbar-btn {
   padding: 6px 12px;
@@ -638,7 +643,14 @@
   font-weight: 400;
   display: flex;
 }
-
+.nav-congViec {
+  text-decoration: none !important;
+  color: #000;
+}
+.nav-congViec:hover {
+  text-decoration: none !important;
+  color: #000;
+}
 // Result
 .seller-img {
   width: 24px;
@@ -670,11 +682,83 @@
   padding: 2px 0 0;
   margin-right: 6px;
 }
-.seller-star{
+.seller-star {
   position: relative;
   top: -1px;
   margin-right: 3px;
 }
+
+// Chi Tiết Công Việc
+.gig-page {
+  position: relative;
+  top: 20px;
+}
+.margin-right-16 {
+  margin-right: 16px;
+}
+.margin-left-10 {
+  margin-left: 10px;
+}
+.Breadcrumb {
+  padding-bottom: 10px;
+}
+.Breadcrumb a {
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: none;
+  color: #446ee7;
+}
+.Breadcrumb a:hover {
+  text-decoration: underline;
+}
+.gig-page .sitebar {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.gig-page .main-title {
+  font-size: 28px;
+  line-height: 130%;
+  color: #404145;
+  font-weight: 700;
+  font-family: Helvetica, Helvetica, Arial, sans-serif;
+  padding-bottom: 10px;
+}
+.seller-overview-img {
+  position: relative;
+  top: -3px;
+  margin-right: 5px;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+.toprateseller {
+  margin: 0 10px;
+  position: relative;
+  padding-right: 8px;
+}
+.toprateseller::after {
+  position: absolute;
+  content: "|";
+  top: 0;
+  right: 0;
+  color: #c5c6c9;
+}
+.rating-score {
+  margin: 0 5px;
+  color: #ffb33e;
+}
+.rating-count {
+  color: #62646a;
+}
+.seller-overview .order-quantity{
+  margin-left: 5px;
+}
+.main .star-svg{
+  position: relative;
+  top: -2px;
+}
+
 // Responsive
 // Phone
 @media only screen and (max-width: 1200px) {
@@ -752,6 +836,13 @@
   .delivery {
     display: none;
   }
+  .header {
+    min-height: 5000px;
+  }
+  .object-fit {
+    object-fit: cover;
+    min-height: 500px;
+  }
 }
 @media only screen and (max-width: 768px) {
   .hide-text {
@@ -775,9 +866,7 @@
     font-size: 30px;
     line-height: 30px;
   }
-  .text-area {
-    margin-bottom: 15px;
-  }
+
   .paypal {
     display: none;
   }
@@ -827,9 +916,13 @@
   .bubget {
     display: none;
   }
-  // .delivery{
-  //   display: none;
-  // }
+  .header {
+    min-height: 480px;
+  }
+  .object-fit {
+    object-fit: cover;
+    min-height: 480px;
+  }
 }
 
 @media only screen and (max-width: 576px) {
@@ -929,5 +1022,12 @@
   }
   .delivery {
     display: none;
+  }
+  .header {
+    min-height: 450px;
+  }
+  .object-fit {
+    object-fit: cover;
+    min-height: 450px;
   }
 }

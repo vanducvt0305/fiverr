@@ -70,7 +70,7 @@ export default function ReactCarousel({}: Props) {
     <div className="mt-4">
       <Slider {...settings}>
         <div>
-          <img className="w-100" src="../assets/img/crs1.png" alt="..." />
+          <img className="w-100 " src="../assets/img/crs1.png" alt="..." />
         </div>
         <div>
           <img className="w-100" src="../assets/img/crs2.png" alt="..." />

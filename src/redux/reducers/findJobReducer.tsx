@@ -48,7 +48,8 @@ export interface DsChiTietLoai {
 
 const initialState:any = {
     arrJob:getStoreJson('JOB'),
-    menuTypeJob:[]
+    menuTypeJob:[],
+    congViecChiTiet:getStoreJson('congViecChiTiet')
 }
 
 const findJobReducer = createSlice({
@@ -61,12 +62,16 @@ const findJobReducer = createSlice({
     },
     getMenuTypeJob:(state,action:PayloadAction<MenuLoaiCongViec[]>)=>{
         state.menuTypeJob = action.payload
-        console.log(state.menuTypeJob)
+    },
+    layCongViecChiTietAction:(state,action:PayloadAction<CongViec>)=>{
+        state.congViecChiTiet = action.payload
+        console.log(state.congViecChiTiet, 'Action')
+        setStoreJson('congViecChiTiet',state.congViecChiTiet)
     }
   }
 });
 
-export const {getJobAction,getMenuTypeJob} = findJobReducer.actions
+export const {getJobAction,getMenuTypeJob,layCongViecChiTietAction} = findJobReducer.actions
 
 export default findJobReducer.reducer
 
@@ -88,6 +93,18 @@ export const getMenuTypeJobApi = ()=>{
         try {
             const result = await http.get('cong-viec/lay-menu-loai-cong-viec')
             dispatch(getMenuTypeJob(result.data.content))
+        } catch (error) {
+            console.log(error)
+        }
+    }
+}
+
+export const layCongViecChiTietApi = (id:number)=>{
+    return async (dispatch:Appdispatch)=>{
+        try {
+            const result = await http.get(`cong-viec/lay-cong-viec-chi-tiet/${id}`)
+            dispatch(layCongViecChiTietAction(result.data.content[0]))
+            console.log(result.data.content[0],'Api')
         } catch (error) {
             console.log(error)
         }
