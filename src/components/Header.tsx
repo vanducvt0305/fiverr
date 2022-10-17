@@ -142,7 +142,7 @@ export default function Header({}: Props) {
           </li>
           <li className="display-from-md hover-green">
             <a
-              href="/login?source=top_nav"
+              href="/login"
               rel="nofollow"
               className="js-open-popup-login nav-link"
             >
@@ -150,7 +150,7 @@ export default function Header({}: Props) {
             </a>
           </li>
           <li>
-            <a className="fiverr-header-join" href="/join?source=top_nav">
+            <a className="fiverr-header-join" href="/register">
               Join
             </a>
           </li>

@@ -21,10 +21,14 @@ export default function DanhSachCongViec({}: Props) {
     (state: RootState) => state.findJobReducer
   );
   const renderJob = () => {
-    return arrJob?.map((job: any,index:number) => {
+    return arrJob?.map((job: any, index: number) => {
       return (
-        <NavLink className="col-sm col-xxl-3 col-lg-4 col-md-6 mt-5 nav-congViec" key={index} to={`/chitietcongviec/${job.id}`}>
-          <div className="card" style={{ width: "18rem" }}>
+        <div
+          className="card card-sm col-sm-6 col-xxl-3 col-lg-4 col-md-6 mt-3 col-12"
+          key={index}
+          style={{ width: "18rem" }}
+        >
+          <NavLink className='nav-congViec' to={`/chitietcongviec/${job.id}`}>
             <img
               src={job.congViec.hinhAnh}
               className="card-img-top"
@@ -84,8 +88,8 @@ export default function DanhSachCongViec({}: Props) {
                 </a>
               </div>
             </div>
-          </div>
-        </NavLink>
+          </NavLink>
+        </div>
       );
     });
   };
@@ -164,7 +168,7 @@ export default function DanhSachCongViec({}: Props) {
               <span className="title">Results for "html"</span>
             </div>
           </div>
-          <div className="topbar d-flex justify-content-between">
+          <div className="topbar justify-content-between">
             <div className="topbar-left d-flex">
               <button className="topbar-btn">
                 Category
@@ -269,14 +273,21 @@ export default function DanhSachCongViec({}: Props) {
           </div>
         </div>
         <div className="container">
-          <div className="row">{renderJob()}</div>
+          <div className="row">
+            <div className="service-available">
+              {arrJob.length - 1} services available
+            </div>
+            <div className="row main-row justify-content-between">
+            {renderJob()}
+            </div>
+          </div>
         </div>
-        <hr className="my-5"/>
-      <div className="container">
-        <div className="row">
-          <Footer/>
+        <hr className="my-5" />
+        <div className="container">
+          <div className="row">
+            <Footer />
+          </div>
         </div>
-      </div>
       </div>
     </div>
   );

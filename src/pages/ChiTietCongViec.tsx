@@ -157,7 +157,7 @@ export default function ChiTietCongViec({}: Props) {
                 </div>
                 <span className="rating-score">{numberStar}</span>
                 <span className="rating-count">({congViecChiTiet?.congViec.danhGia})</span>
-                <div className="order-quantity">27 Orders in Queue</div>
+                {/* <div className="order-quantity">27 Orders in Queue</div> */}
               </div>
             </div>
           </div>
