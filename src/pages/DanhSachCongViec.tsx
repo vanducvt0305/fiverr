@@ -275,7 +275,7 @@ export default function DanhSachCongViec({}: Props) {
         <div className="container">
           <div className="row">
             <div className="service-available">
-              {arrJob.length - 1} services available
+              {arrJob?.length - 1} services available
             </div>
             <div className="row main-row justify-content-between">
             {renderJob()}
