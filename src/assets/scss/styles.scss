@@ -588,7 +588,7 @@
   color: #62646a;
   font-size: 15px;
 }
-.main-row{
+.main-row {
   margin-left: 0 !important;
   margin-right: 0 !important;
 }
@@ -600,14 +600,14 @@
   line-height: 150%;
   font-weight: 700;
 }
-.card{
+.card {
   padding: 0 !important;
 }
 .card-body {
   min-height: 200px;
 }
 // TopBar
-.topbar{
+.topbar {
   display: flex;
 }
 .topbar-btn {
@@ -774,7 +774,96 @@
 }
 .main .star-svg {
   position: relative;
-  top: -2px;
+  top: -3px;
+}
+// Slider Main
+.SliderContainer {
+  width: 100%;
+  height: 600px;
+}
+.slide-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.img-slide {
+  width: 100%;
+  height: 80%;
+}
+.left-arrow-style {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-200%);
+  left: -25px;
+  font-size: 24px;
+  color: #000;
+  z-index: 1;
+  background-color: #fff;
+  padding: 4px 16px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 5px 0;
+}
+.right-arrow-style {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-200%);
+  right: -25px;
+  font-size: 24px;
+  color: #000;
+  background-color: #fff;
+  padding: 4px 16px;
+  border-radius: 50%;
+  z-index: 1;
+  cursor: pointer;
+  box-shadow: 0 2px 5px 0;
+}
+.silder-dot-image-container {
+  display: flex;
+  justify-content: start;
+  width: 100%;
+  height: auto;
+}
+.slider-dot-image {
+  width: 150px;
+  height: 100px;
+  background-position: center;
+  background-size: cover;
+  margin-right: 15px;
+  margin-top: 15px;
+  border: 1px solid #000;
+  cursor: pointer;
+}
+.description-job {
+  position: relative;
+}
+
+.user-profile-image {
+  width: 110px;
+  height: 110px;
+}
+.user-disc {
+  margin-left: 15px;
+}
+.username-nguoitao {
+  text-decoration: none;
+  color: #62646a;
+  display: block;
+  font-weight: 700;
+}
+.css-mota{
+  color: #62646a;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 20px;
+  margin-top: 5px;
+}
+.contact-me{
+  border: 1px solid #000;
+  padding: 7px 24px;
+  background-color: #fff;
+  border-radius: 4px;
+  margin-top: 20px;
 }
 
 // Responsive
@@ -941,7 +1030,7 @@
     object-fit: cover;
     min-height: 480px;
   }
-  .card-sm{
+  .card-sm {
     display: flex;
     justify-content: space-around;
     width: 50% !important;
@@ -1053,13 +1142,13 @@
     object-fit: cover;
     min-height: 450px;
   }
-  .card-sm{
+  .card-sm {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100% !important;
   }
-  .topbar{
+  .topbar {
     display: none !important;
   }
 }

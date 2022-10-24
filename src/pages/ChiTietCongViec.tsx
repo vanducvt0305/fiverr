@@ -11,6 +11,30 @@ import {
   layCongViecChiTietApi,
   MenuLoaiCongViec,
 } from "../redux/reducers/findJobReducer";
+import ImageSlider from "../components/ImageSlider";
+
+const slides = [
+  {
+    url: `https://fiverr-res.cloudinary.com/images/t_smartwm/t_main1,q_auto,f_auto,q_auto,f_auto/attachments/delivery/asset/d3504ec2bb5b0fdf798fc91eb699e074-1659985220/white%20hat%20SEO%20backlinks/200-manual-seo-backlinks-white-hat-manual-link-building-google-top-ranking.png`,
+    title: "SEO Top",
+  },
+  {
+    url: `https://fiverr-res.cloudinary.com/images/t_smartwm/t_main1,q_auto,f_auto,q_auto,f_auto/attachments/delivery/asset/361bf59d72b4592190e1595d72036299-1635589507/durrzaammetvakantie%20DR%2030_/200-manual-seo-backlinks-white-hat-manual-link-building-google-top-ranking.png`,
+    title: "SEO",
+  },
+  {
+    url: `https://fiverr-res.cloudinary.com/images/t_smartwm/t_main1,q_auto,f_auto,q_auto,f_auto/attachments/delivery/asset/dc713682470ab5182f77bd8bbe45c454-1659962361/riocelesteaventuras%20DR%20and%20UR%20boosted/200-manual-seo-backlinks-white-hat-manual-link-building-google-top-ranking.png`,
+    title: "SEO Best",
+  },
+  {
+    url: `https://fiverr-res.cloudinary.com/images/t_smartwm/t_main1,q_auto,f_auto,q_auto,f_auto/attachments/delivery/asset/05b9f51c5ecfcc4a1d381dcce64b6626-1657030521/seo%20monthly%20service/200-manual-seo-backlinks-white-hat-manual-link-building-google-top-ranking.png`,
+    title: "SEO Rank",
+  },
+  {
+    url: `https://fiverr-res.cloudinary.com/images/t_smartwm/t_main1,q_auto,f_auto,q_auto,f_auto/attachments/delivery/asset/3f0d8b7ee24ee71c3660e90ededc17e6-1639928651/raumdecken%20TF%2030_/200-manual-seo-backlinks-white-hat-manual-link-building-google-top-ranking.png`,
+    title: "SEO Ok",
+  },
+];
 
 type Props = {};
 
@@ -57,7 +81,7 @@ export default function ChiTietCongViec({}: Props) {
       );
     });
   };
-  let numberStar:number = congViecChiTiet?.congViec.saoCongViec;
+  let numberStar: number = congViecChiTiet?.congViec.saoCongViec;
   return (
     <div>
       <div className="container">
@@ -142,22 +166,95 @@ export default function ChiTietCongViec({}: Props) {
             </h1>
             <div className="seller-overview d-flex">
               <div>
-                  <img
-                    className="seller-overview-img"
-                    src="https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/8b2d13bf05064297b603ddd875e233d7-1624900850750/827000ec-2cad-4fab-93e3-29329157b064.jpg"
-                    alt="seosupremacy"
-                    loading="lazy"
-                  />
+                <img
+                  className="seller-overview-img"
+                  src="https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/8b2d13bf05064297b603ddd875e233d7-1624900850750/827000ec-2cad-4fab-93e3-29329157b064.jpg"
+                  alt="seosupremacy"
+                  loading="lazy"
+                />
               </div>
               <div className="seller-info d-flex">
-                <div className="seller-name">{congViecChiTiet?.tenNguoiTao}</div>
+                <div className="seller-name">
+                  {congViecChiTiet?.tenNguoiTao}
+                </div>
                 <div className="toprateseller">Top Rated Seller</div>
                 <div className="d-flex star-svg">
-                  {Array.from({length:numberStar},(component:FC,index:number)=><StarComponent key={index}/>)}               
+                  {Array.from(
+                    { length: numberStar },
+                    (component: FC, index: number) => (
+                      <StarComponent key={index} />
+                    )
+                  )}
                 </div>
                 <span className="rating-score">{numberStar}</span>
-                <span className="rating-count">({congViecChiTiet?.congViec.danhGia})</span>
+                <span className="rating-count">
+                  ({congViecChiTiet?.congViec.danhGia})
+                </span>
                 {/* <div className="order-quantity">27 Orders in Queue</div> */}
+              </div>
+            </div>
+            <div className="SliderContainer">
+              <ImageSlider slides={slides} />
+            </div>
+            <div className="description-job">
+              <h2>About This Gig</h2>
+              {/* <p>
+                <strong>#Latest White Hat SEO Backlinks Strategy 2022</strong>
+              </p> */}
+              <p>
+                <strong>{congViecChiTiet?.congViec.moTaNgan}</strong>
+              </p>
+              <p>{congViecChiTiet?.congViec.moTa}</p>
+              <p>We Provide Contextual Link Building:</p>
+              <ul>
+                <li>Article Submission</li>
+                <li>Tier 1 & Tier 2</li>
+                <li>Web 2.0</li>
+                <li>Profile Links</li>
+                <li>White Hat Backlinks</li>
+                <li>Image Sharing</li>
+                <li>and more for GOOGLE TOP RANKING</li>
+              </ul>
+              <h2>About The Seller</h2>
+              <div className="user d-flex">
+                <div className="user-profile-image">
+                  <label
+                    className="profile-pict"
+                    style={{
+                      width: "110px",
+                      height: "110px",
+                      fontSize: "2.2rem",
+                    }}
+                  >
+                    <img
+                      className="w-100"
+                      src="http://sc04.alicdn.com/kf/Hc3e61591078043e09dba7808a6be5d21n.jpg"
+                    />
+                  </label>
+                </div>
+                <div className="user-disc">
+                  <div className="username-line">
+                    <a className="username-nguoitao" href="#">
+                      {congViecChiTiet?.tenNguoiTao}
+                    </a>
+                  </div>
+                  <div className="css-mota">
+                    {congViecChiTiet.congViec.tenCongViec}
+                  </div>
+                  <div className="star-group d-flex mt-2">
+                    <div className="star-svg">
+                      {Array.from(
+                        { length: numberStar },
+                        (component: FC, index: number) => (
+                          <StarComponent key={index} />
+                        )
+                      )}
+                    </div>
+                    <div className="mx-1">{numberStar}</div>
+                    <div>({congViecChiTiet.congViec.danhGia})</div>
+                  </div>
+                  <button className="contact-me">ConTact Me</button>
+                </div>
               </div>
             </div>
           </div>

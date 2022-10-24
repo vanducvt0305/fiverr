@@ -35,7 +35,7 @@ export default function Header({}: Props) {
         </button>
       </div>
       <div className="col-lg-2 col-xl-1 col-4 col-sm-2">
-        <a href="/?source=top_nav" className="site-logo">
+        <a href="/" className="site-logo">
           <svg
             width="89"
             height="27"

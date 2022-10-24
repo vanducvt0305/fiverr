@@ -45,6 +45,13 @@ export interface DsChiTietLoai {
     tenChiTiet: string;
 }
 
+// export interface slides {
+//     url: string;
+//     title: string;
+// }
+
+
+
 
 const initialState:any = {
     arrJob:getStoreJson('JOB'),
