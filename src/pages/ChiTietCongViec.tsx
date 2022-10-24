@@ -51,7 +51,6 @@ export default function ChiTietCongViec({}: Props) {
   useEffect(() => {
     dispatch(getMenuTypeJobApi());
     dispatch(layCongViecChiTietApi(params.id));
-    console.log("useEffect");
   }, []);
 
   const renderMenuTypeJob = () => {
@@ -239,7 +238,7 @@ export default function ChiTietCongViec({}: Props) {
                     </a>
                   </div>
                   <div className="css-mota">
-                    {congViecChiTiet.congViec.tenCongViec}
+                    {congViecChiTiet?.congViec.tenCongViec}
                   </div>
                   <div className="star-group d-flex mt-2">
                     <div className="star-svg">
@@ -251,7 +250,7 @@ export default function ChiTietCongViec({}: Props) {
                       )}
                     </div>
                     <div className="mx-1">{numberStar}</div>
-                    <div>({congViecChiTiet.congViec.danhGia})</div>
+                    <div>({congViecChiTiet?.congViec.danhGia})</div>
                   </div>
                   <button className="contact-me">ConTact Me</button>
                 </div>

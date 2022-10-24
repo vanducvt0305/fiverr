@@ -72,7 +72,6 @@ const findJobReducer = createSlice({
     },
     layCongViecChiTietAction:(state,action:PayloadAction<CongViec>)=>{
         state.congViecChiTiet = action.payload
-        console.log(state.congViecChiTiet, 'Action')
         setStoreJson('congViecChiTiet',state.congViecChiTiet)
     }
   }
@@ -111,7 +110,6 @@ export const layCongViecChiTietApi = (id:number)=>{
         try {
             const result = await http.get(`cong-viec/lay-cong-viec-chi-tiet/${id}`)
             dispatch(layCongViecChiTietAction(result.data.content[0]))
-            console.log(result.data.content[0],'Api')
         } catch (error) {
             console.log(error)
         }
