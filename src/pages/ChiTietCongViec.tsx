@@ -13,6 +13,7 @@ import {
   MenuLoaiCongViec,
 } from "../redux/reducers/findJobReducer";
 import ImageSlider from "../components/ImageSlider";
+import Footer from "../components/Footer";
 
 const slides = [
   {
@@ -145,7 +146,7 @@ export default function ChiTietCongViec({}: Props) {
               </div>
             </div>
           </div>
-          <div className="review-details mt-3 my-3">
+          <div className="review-details mt-3">
             {Array.from(
               { length: cmt.saoBinhLuan },
               (component: FC, index: number) => (
@@ -609,6 +610,8 @@ export default function ChiTietCongViec({}: Props) {
           </div>
         </div>
       </div>
+      <hr />
+      <Footer/>
     </div>
   );
 }
