@@ -851,20 +851,151 @@
   display: block;
   font-weight: 700;
 }
-.css-mota{
+.css-mota {
   color: #62646a;
   font-weight: 300;
   font-size: 20px;
   line-height: 20px;
   margin-top: 5px;
 }
-.contact-me{
+.contact-me {
   border: 1px solid #000;
   padding: 7px 24px;
   background-color: #fff;
   border-radius: 4px;
   margin-top: 20px;
 }
+.faq-text p {
+  margin-bottom: 0;
+}
+.faq-section {
+  margin-top: 50px;
+}
+.question {
+  cursor: pointer;
+}
+.fa-angle-down {
+  cursor: pointer;
+}
+
+// Review section
+.review {
+  margin: 50px 0;
+}
+.quantity-review {
+  font-size: 24px;
+  font-weight: 500;
+}
+.star-average {
+  color: #ffb33e;
+  font-size: 16px;
+  position: relative;
+  top: -2px;
+}
+.sort-by {
+  cursor: pointer;
+}
+.most-relevant {
+  font-weight: 600;
+}
+.cover-type-star {
+  width: 100%;
+}
+.rating-breakdown {
+  width: 100%;
+  margin-top: 10px;
+  padding-left: 50px;
+}
+.rating-breakdown ul {
+  list-style: none;
+  padding: 0;
+}
+.type-star {
+  margin-top: 10px;
+  display: flex;
+  width: 100% !important;
+  justify-content: space-between;
+}
+.background-div {
+  background-color: #e4e5e7;
+  border-radius: 999px;
+  height: 8px;
+  position: relative;
+  width: 100%;
+}
+.inline {
+  margin-right: 10px;
+  position: relative;
+  width: 80px !important;
+}
+.average-color {
+  position: relative;
+  top: 2px;
+  width: 80%;
+}
+.star-progress-shape {
+  width: 93.3%;
+  background-color: #ffb33e;
+  height: 8px;
+  border-bottom-left-radius: 999px;
+  border-top-left-radius: 999px;
+}
+.star-progress-shape-4 {
+  width: 4.4%;
+}
+.star-progress-shape-n {
+  width: 0;
+}
+.quantity-star-review {
+  margin-left: 10px;
+}
+// Filter
+.searchTerm {
+  border: 1px solid #c5c6c9;
+  outline: none;
+  padding: 8px 12px;
+  color: #404145;
+  line-height: 12px;
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+  resize: none;
+  width: 45%;
+}
+.search-icon {
+  background-color: #222325;
+  border-radius: 0 4px 4px 0 !important;
+  height: 42px !important;
+  padding: 13px 16px !important;
+  width: 48px !important;
+  display: flex;
+  align-items: center;
+}
+// Reviews
+.country-wrapper{
+  margin-top: 5px;
+}
+.profile-pict-img{
+  width: 48px;
+  height: 48px;
+  font-size: 1em;
+  border-radius: 50%;
+}
+.username-block{
+  margin-left: 20px;
+}
+.country-flag{
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+.review-details{
+  padding-left: 70px;
+}
+.inline-divider{
+  border-right: 1px solid #e4e5e7;
+  margin: 2px 8px;
+}
+
 
 // Responsive
 // Phone
